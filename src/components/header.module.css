@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #0f0f0f;
     padding: 5% 0;
-    background: radial-gradient(ellipse at bottom, rgba(34,34,34,1) 20%, rgba(0,0,0,1) 100%);
 }
 
 .name {
