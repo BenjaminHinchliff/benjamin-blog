@@ -1,0 +1,16 @@
+.outer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.inner {
+    float: right;
+    margin: 0.5% 1%;
+}
+
+.link {
+    color: #eb8d21;
+}
