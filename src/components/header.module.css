@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 5% 0;
+    background: radial-gradient(ellipse at bottom, rgba(34,34,34,1) 20%, rgba(0,0,0,1) 100%);
+}
+
+.name {
+    font-family: 'Cascadia Code', monospace;
+    display: flex;
+    margin-right: 2.5%;
+    color: white;
+    font-size: 3em;
+}
