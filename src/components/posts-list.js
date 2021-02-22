@@ -16,10 +16,16 @@ const PostsList = () => {
       }
     }
   `)
+  const posts = data.allWpPost.nodes;
   return (
     <>
-      {data.allWpPost.nodes.map(({id, title, date, excerpt, slug}) => {
-        return <PostSummary key={id} slug={slug} title={title} date={date} exerpt={excerpt} />
+      {posts.map(({id, title, date, excerpt, slug}, i) => {
+        return (
+          <>
+            <PostSummary key={id} slug={slug} title={title} date={date} exerpt={excerpt} />
+            {i !== posts.length - 1 && <hr />}
+          </>
+        );
       })}
     </>
   );

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Header from "../components/header";
 import Nav from "../components/nav";
+import Footer from './footer';
 import layoutStyles from './layout.module.css';
 
 const Layout = ({ title, location, children }) => {
@@ -17,6 +18,7 @@ const Layout = ({ title, location, children }) => {
             })()}
             <div className={layoutStyles.content}>
                 {children}
+                <Footer />
             </div>
         </main>
     );
