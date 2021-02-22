@@ -1,8 +1,8 @@
 const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions;
-    return graphql(`
+exports.createPages = ({graphql, actions}) => {
+  const {createPage} = actions;
+  return graphql(`
       {
         allWpPost(sort: { fields: [date] }) {
           nodes {
@@ -11,15 +11,15 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-      result.data.allWpPost.nodes.forEach(node => {
-        createPage({
-          path: node.slug,
-          component: path.resolve('./src/templates/blog-post.js'),
-          context: {
-            id: node.id
-          },
-        });
+    `).then((result) => {
+    result.data.allWpPost.nodes.forEach((node) => {
+      createPage({
+        path: node.slug,
+        component: path.resolve('./src/templates/blog-post.js'),
+        context: {
+          id: node.id,
+        },
       });
     });
+  });
 };
