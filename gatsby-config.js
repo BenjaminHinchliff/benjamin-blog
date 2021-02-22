@@ -30,6 +30,9 @@ module.exports = {
       },
       __key: "images",
     },
-    "gatsby-plugin-react-helmet"
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    }
   ],
 };
