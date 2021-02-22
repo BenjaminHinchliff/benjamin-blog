@@ -1,5 +1,5 @@
-import {Link} from 'gatsby';
 import * as React from 'react';
+import {Link} from 'gatsby';
 import postStyles from './post-summary.module.css';
 
 const PostSummary = ({title, date, excerpt, slug}) => {

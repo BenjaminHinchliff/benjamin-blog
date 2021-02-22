@@ -6,10 +6,18 @@ import {Link} from 'gatsby';
 const Header = () => {
   return (
     <div className={headerStyles.header}>
-      <h1 className={headerStyles.name}>
-        <Link to="/">Benjamin Hinchliff</Link>
-      </h1>
-      <img src={cat} height={100} width={100} alt="order" />
+      <Link className={headerStyles.headerLink} to="/">
+        <h1 className={headerStyles.name}>
+          Benjamin Hinchliff
+        </h1>
+        <img
+          className={headerStyles.logo}
+          src={cat}
+          height={100}
+          width={100}
+          alt="polyogonal cat"
+        />
+      </Link>
     </div>
   );
 };

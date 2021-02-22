@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 import PostSummary from './post-summary';
 
@@ -19,10 +19,10 @@ const PostsList = () => {
   const posts = data.allWpPost.nodes;
   return (
     <>
-      {posts.map(({id, title, date, excerpt, slug}, i) => {
+      {posts.map(({id, ...post}, i) => {
         return (
           <div key={id}>
-            <PostSummary {...{title, date, excerpt, slug}} />
+            <PostSummary {...post} />
             {i !== posts.length - 1 && <hr />}
           </div>
         );

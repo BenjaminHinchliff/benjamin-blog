@@ -1,25 +1,28 @@
 .header {
+    padding: 5% 0;
+    background-color: #0f0f0f;
+}
+
+.header-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0f0f0f;
-    padding: 5% 0;
+    text-decoration: none;
 }
 
 .name {
     display: flex;
-    margin-right: 2.5%;
     font-size: 3em;
     text-align: center;
-}
-
-.name a {
     color: white;
-    text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
     .name {
         width: min-content;
     }
+}
+
+.logo {
+    margin: 2.5%;
 }
