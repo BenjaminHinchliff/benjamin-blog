@@ -6,9 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
       {
         allWpPost(sort: { fields: [date] }) {
           nodes {
-            title
-            excerpt
-            content
+            id
             slug
           }
         }
@@ -19,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
           path: node.slug,
           component: path.resolve('./src/templates/blog-post.js'),
           context: {
-            slug: node.slug,
+            id: node.id
           },
         });
       });

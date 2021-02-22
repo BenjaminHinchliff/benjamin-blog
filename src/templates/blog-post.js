@@ -15,8 +15,8 @@ const BlogPost = ({ data }) => {
 export default BlogPost;
 
 export const query = graphql`
-  query($slug: String!) {
-    allWpPost(filter: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    allWpPost(filter: { id: { eq: $id } }) {
       nodes {
         title
         content
