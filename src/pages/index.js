@@ -4,7 +4,7 @@ import PostsList from "../components/posts-list"
 
 const IndexPage = ({ location }) => {
   return (
-    <Layout title="Benjamin's Blog" location={location}>
+    <Layout title="Benjamin's Blog" description="Homepage" location={location}>
       <PostsList />
     </Layout>
   )
