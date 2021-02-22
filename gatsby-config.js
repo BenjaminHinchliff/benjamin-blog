@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: "Benjamin's Blog",
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
