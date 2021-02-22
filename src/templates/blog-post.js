@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import postStyles from './blog-post.module.css';
 
-const BlogPost = ({ data }) => {
-    const post = data.allWpPost.nodes[0];
-    console.log(post);
+const BlogPost = ({ data, location }) => {
+    const { title, date, content } = data.allWpPost.nodes[0];
     return (
-        <main>
-            <h2>{post.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </main>
+        <Layout title={`Benjamin's Blog - ${title}`} location={location}>
+            <h2 className={postStyles.title}>{title}</h2>
+            <h3>{date}</h3>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+        </Layout>
     );
 };
 
@@ -19,6 +21,7 @@ export const query = graphql`
     allWpPost(filter: { id: { eq: $id } }) {
       nodes {
         title
+        date(formatString: "DD MMMM, YYYY")
         content
       }
     }
