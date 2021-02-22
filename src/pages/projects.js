@@ -1,7 +1,5 @@
 import * as React from 'react';
-import Header from '../components/header';
 import Layout from '../components/layout';
-import Nav from '../components/nav';
 
 const ProjectsPage = ({ location }) => {
     return (
