@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className={headerStyles.header}>
             <h1 className={headerStyles.name}><Link to="/">Benjamin Hinchliff</Link></h1>
-            <img src={cat} height={100} alt="order" />
+            <img src={cat} height={100} width={100} alt="order" />
         </div>
     );
 }
