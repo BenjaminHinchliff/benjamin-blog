@@ -9,6 +9,17 @@
 .name {
     display: flex;
     margin-right: 2.5%;
-    color: white;
     font-size: 3em;
+    text-align: center;
+}
+
+.name a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .name {
+        width: min-content;
+    }
 }
