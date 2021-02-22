@@ -1,8 +1,8 @@
 {
-    "name": "benjamin-s-blog",
+    "name": "benjamin-blog",
     "version": "1.0.0",
     "private": true,
-    "description": "Benjamin's Blog",
+    "description": "My Blog that I was too lazy to make for years",
     "author": "Benjamin Hinchliff",
     "keywords": [
         "gatsby"
