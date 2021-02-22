@@ -5,7 +5,7 @@ import PostSummary from './post-summary';
 const PostsList = () => {
   const data = useStaticQuery(graphql`
     {
-      allWpPost {
+      allWpPost(sort: {fields: date, order: DESC}) {
         nodes {
           id
           slug
@@ -21,10 +21,10 @@ const PostsList = () => {
     <>
       {posts.map(({id, title, date, excerpt, slug}, i) => {
         return (
-          <>
-            <PostSummary key={id} {...{title, date, excerpt, slug}} />
+          <div key={id}>
+            <PostSummary {...{title, date, excerpt, slug}} />
             {i !== posts.length - 1 && <hr />}
-          </>
+          </div>
         );
       })}
     </>
