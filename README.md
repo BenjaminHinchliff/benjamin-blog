@@ -2,7 +2,7 @@
 
 [benjaminhinchliff.com](https://benjaminhinchliff.com/)
 
-So I finally go around to making a blog! As per usual, I decided that a
+So I finally got around to making a blog! As per usual, I decided that a
 wordpress blog would be far too easy and I needed over-engineer everything.
 
 It's esentially a wordpress backend (hosted on dreamhost) with a gatsby
