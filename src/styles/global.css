@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #161616;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,20 +13,10 @@ p {
     font-family: 'IBM Plex Serif', serif;
 }
 
-.content {
-    margin: auto 15%;
-}
-
 a {
     color: #ffa500;
 }
 
 a:visited {
     color: #e48100;
-}
-
-@media only screen and (max-width: 480px) and (orientation: portrait) {
-    .content {
-        margin: auto;
-    }
 }

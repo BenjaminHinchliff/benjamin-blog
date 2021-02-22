@@ -1,18 +1,12 @@
 import * as React from "react"
-import Header from "../components/header"
-import Nav from "../components/nav"
+import Layout from "../components/layout"
 import PostsList from "../components/posts-list"
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <main>
-      <title>Home Page</title>
-      <Header />
-      <Nav to="/projects">Projects</Nav>
-      <div className="content">
-        <PostsList />
-      </div>
-    </main>
+    <Layout title="Benjamin's Blog" location={location}>
+      <PostsList />
+    </Layout>
   )
 }
 

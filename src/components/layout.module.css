@@ -1,0 +1,12 @@
+.content {
+    margin: auto 15%;
+    background-color: #f8f8f8;
+    overflow: auto;
+    padding: 0 2.5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin: auto;
+    }
+}
