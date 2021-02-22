@@ -10,7 +10,7 @@ const Layout = ({ title, description, location, children }) => {
         <main>
             <Helmet htmlAttributes={{ lang: 'en' }}>
                 <meta charSet="utf-8" />
-                <meta name={description} />
+                <meta name="description" content={description} />
                 <title>{title}</title>
             </Helmet>
             <Header />
