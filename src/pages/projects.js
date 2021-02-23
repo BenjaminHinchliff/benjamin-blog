@@ -31,6 +31,7 @@ export const query = graphql`
           repositories {
             edges {
               node {
+                id
                 name
                 url
                 description

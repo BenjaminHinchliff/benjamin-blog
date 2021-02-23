@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Link} from 'gatsby';
 
 const Project = ({name, url, description}) => {
   return (
     <div>
-      <h3><Link to={url}>{name}</Link></h3>
+      <h3><a href={url}>{name}</a></h3>
       <p>{description ?? '(no description)'}</p>
     </div>
   );
