@@ -17,9 +17,7 @@ const ProjectsPage = ({data, location}) => {
         </a>
       </p>
       <ListComponent>
-        {repos.map(({node: {id, ...repo}}) => {
-          return <Project key={id} {...repo} />;
-        })}
+        {repos.map(({node: {id, ...repo}}) => <Project key={id} {...repo} />)}
       </ListComponent>
     </Layout>
   );
