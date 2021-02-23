@@ -8,10 +8,10 @@
         "gatsby"
     ],
     "scripts": {
-        "develop": "gatsby develop",
-        "start": "gatsby develop",
-        "build": "gatsby build",
-        "serve": "gatsby serve",
+        "develop": "env-cmd gatsby develop",
+        "start": "npm run develop",
+        "build": "env-cmd gatsby build",
+        "serve": "env-cmd gatsby serve",
         "clean": "gatsby clean"
     },
     "dependencies": {
@@ -24,6 +24,7 @@
         "gatsby-plugin-sharp": "^2.14.1",
         "gatsby-plugin-styled-components": "^3.10.0",
         "gatsby-source-filesystem": "^2.11.0",
+        "gatsby-source-github-api": "^0.2.1",
         "gatsby-source-wordpress": "^4.0.1",
         "gatsby-transformer-sharp": "^2.12.0",
         "react": "^16.13.1",
@@ -32,8 +33,9 @@
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
-        "eslint-config-react-app": "^5.2.1",
+        "env-cmd": "^10.1.0",
         "eslint-config-google": "^0.14.0",
+        "eslint-config-react-app": "^5.2.1",
         "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.20"
     }
 }

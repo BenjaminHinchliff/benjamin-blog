@@ -12,6 +12,35 @@ module.exports = {
         url: 'https://wordpress.benjaminhinchliff.com/graphql',
       },
     },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.TOKEN,
+        graphQLQuery: `
+        query ($author: String = "", $userFirst: Int = 0) {
+          user(login: $author) {
+            repositories(
+              first: $userFirst,
+              orderBy: {field: PUSHED_AT, direction: DESC},
+              privacy: PUBLIC
+            ) {
+              edges {
+                node {
+                  id
+                  name
+                  description
+                  url
+                }
+              }
+            }
+          }
+        }`,
+        variables: {
+          author: 'BenjaminHinchliff',
+          userFirst: 10,
+        },
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
