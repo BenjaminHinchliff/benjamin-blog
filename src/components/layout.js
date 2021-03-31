@@ -16,9 +16,9 @@ const Layout = ({title, description, location, children}) => {
       <Header />
       {(() => {
         if (location.pathname === '/') {
-          return <Nav to="/projects">Projects</Nav>;
+          return <Nav to="/blog">Blog</Nav>;
         } else {
-          return <Nav to="/">Blog</Nav>;
+          return <Nav to="/">Projects</Nav>;
         }
       })()}
       <div className={layoutStyles.content}>

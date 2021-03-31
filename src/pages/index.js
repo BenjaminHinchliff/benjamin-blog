@@ -1,16 +1,23 @@
 import * as React from 'react';
 import {graphql} from 'gatsby';
 import Layout from '../components/layout';
+import Project from '../components/project';
 import ListComponent from '../components/list-component';
-import PostSummary from '../components/post-summary';
 
-const IndexPage = ({data, location}) => {
-  const posts = data.allWpPost.nodes;
+const ProjectsPage = ({data, location}) => {
+  const repos = data.githubData.data.user.repositories.edges;
 
   return (
-    <Layout title="Benjamin's Blog" description="Homepage" location={location}>
+    <Layout title="Projects" description="Projects age" location={location} >
+      <h2>Recently Edited Projects:</h2>
+      <p>A complete list can be found on my
+        {' '}
+        <a href="https://github.com/BenjaminHinchliff?tab=repositories" rel="noopener noreferrer">
+          Github
+        </a>
+      </p>
       <ListComponent>
-        {posts.map(({id, ...post}) => <PostSummary key={id} {...post} />)}
+        {repos.map(({node: {id, ...repo}}) => <Project key={id} {...repo} />)}
       </ListComponent>
     </Layout>
   );
@@ -18,16 +25,23 @@ const IndexPage = ({data, location}) => {
 
 export const query = graphql`
   {
-    allWpPost(sort: {fields: date, order: DESC}) {
-      nodes {
-        id
-        slug
-        title
-        date(formatString: "DD MMMM, YYYY")
-        excerpt
+    githubData {
+      data {
+        user {
+          repositories {
+            edges {
+              node {
+                id
+                name
+                url
+                description
+              }
+            }
+          }
+        }
       }
     }
   }
 `;
 
-export default IndexPage;
+export default ProjectsPage;
